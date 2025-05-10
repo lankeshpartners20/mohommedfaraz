@@ -1,1 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John Smith - Web Developer Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Poppins', sans-serif; background:#0d1117; color:#dde2e7; overflow-x:hidden; }
+    a { color:#58a6ff; text-decoration:none; }
 
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: url('') center/cover no-repeat;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      color: #fff;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+    nav a { margin-left: 25px; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #79c0ff; }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL2pvYjE5MDgtYmFja2dyb3VuZC0wMDIuanBn.jpg') no-repeat center/cover;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero h1, .hero p, .hero img {
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 4rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #999;
+    }
+    .hero-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #58a6ff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+    .hero-photo:hover {
+      transform: scale(1.05);
+    }
+
+    section { padding:100px 20px; max-width:1200px; margin:auto; }
+    h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; color:#58a6ff; }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .about-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #58a6ff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+    .about-photo:hover {
+      transform: scale(1.05);
+    }
+    .about p {
+      max-width: 600px;
+      text-align: left;
+      line-height: 1.8;
+      color: #b3b3b3;
+    }
+
+    .skills, .services, .projects { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:30px; }
+    .skill, .service, .project { background:#161b22; padding:30px; border-radius:10px; text-align:center; box-shadow:0 5px 20px rgba(0,0,0,0.3); transition:transform 0.3s; }
+    .skill:hover, .service:hover, .project:hover { transform:translateY(-8px); }
+    .project img { width:100%; border-radius:10px; margin-bottom:10px; }
+
+    .contact-container { display:grid; grid-template-columns:1fr 1fr; gap:30px; background:#161b22; border-radius:12px; padding:40px; }
+    .contact-left { display:flex; flex-direction:column; justify-content:center; }
+    .contact-left h3 { color:#58a6ff; margin-bottom:20px; }
+    .contact-left p { margin:5px 0; color:#b3b3b3; }
+    .contact-left a { display:inline-block; margin:5px 0; color:#58a6ff; }
+
+    .contact-form input, .contact-form textarea {
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:8px;
+      background:#0d1117;
+      color:#c9d1d9;
+      margin-bottom:15px;
+    }
+    .contact-form button {
+      padding:15px;
+      background:#58a6ff;
+      color:#0d1117;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    i{
+      color: #58a6ff;
+    }
+
+    footer { background:#010409; text-align:center; padding:40px; font-size:0.9rem; color:#666; }
+
+    @media (max-width:800px) {
+      .contact-container { grid-template-columns:1fr; }
+      header { flex-direction: column; padding: 20px; }
+      nav a { margin: 10px; }
+      .about-content { flex-direction: column; }
+    }
+
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong><i>Mohommed</i> Faraz</strong></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="profile.jpg" alt="John Smith Photo" class="hero-photo" data-aos="zoom-in">
+  <h1 data-aos="fade-down">I'm Mohommed Faraz</h1>
+  <p data-aos="fade-up" data-aos-delay="200">Professional Software Developer, Web Developer, and Data Entry Specialist with strong expertise in building modern, high-performance websites and applications. Skilled in database management, accurate and efficient data entry, and good typing skills. Committed to delivering reliable, user-friendly solutions through clean code, effective data handling, and attention to detail across software and data projects.</p>
+</section>
+
+<section id="about" class="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="your-photo.jpg" alt="John Smith Photo" class="about-photo" data-aos="zoom-in">
+    <p>I’m a full-stack web developer with a passion for building scalable, user-friendly web solutions. With 6+ years of experience in frontend and backend technologies, I blend clean code with stunning design to deliver exceptional digital products. I love solving complex problems, working with teams, and continuously improving my craft.</p>
+  </div>
+</section>
+
+<section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS3 / Sass</div>
+    <div class="skill">JavaScript (ES6+)</div>
+    <div class="skill">React / Vue</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">MongoDB</div>
+    <div class="skill">PHP / MySQL</div>
+    <div class="skill">Docker / Git</div>
+  </div>
+</section>
+
+<section id="services" data-aos="fade-up">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Web Development</h3>
+      <p>Building fast, responsive, scalable websites & web apps with modern technologies.</p>
+    </div>
+    <div class="service">
+      <h3>Frontend Engineering</h3>
+      <p>Expertise in creating interactive UIs & frontend architectures using React, Vue, and JS frameworks.</p>
+    </div>
+    <div class="service">
+      <h3>Backend Development</h3>
+      <p>Robust backend APIs & server-side logic using Node.js, PHP, and databases like MongoDB & MySQL.</p>
+    </div>
+    <div class="service">
+      <h3>Technical Consulting</h3>
+      <p>Helping businesses choose the right tech stack, architecture, & development workflows.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project"><img src="https://via.placeholder.com/400x300" alt="Project 1"><p>E-commerce Platform with React & Node.js</p></div>
+    <div class="project"><img src="https://via.placeholder.com/400x300" alt="Project 2"><p>Portfolio Website with Gatsby & GraphQL</p></div>
+    <div class="project"><img src="https://via.placeholder.com/400x300" alt="Project 3"><p>Custom CMS with Laravel & Vue.js</p></div>
+  </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <div class="contact-left">
+      <h3>Personal Details</h3>
+      <p><strong>Name:</strong> John Smith</p>
+      <p><strong>Email:</strong> <a href="mailto:johnsmith@example.com">johnsmith@example.com</a></p>
+      <p><strong>Phone:</strong> +1 234 567 8900</p>
+      <p><strong>Location:</strong> San Francisco, CA, USA</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/johnsmith" target="_blank">github.com/johnsmith</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/johnsmith" target="_blank">linkedin.com/in/johnsmith</a></p>
+    </div>
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 John Smith | Web Developer | Built with ❤️ in VS Code
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
