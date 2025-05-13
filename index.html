@@ -149,6 +149,43 @@
       .about-content { flex-direction: column; }
     }
 
+     }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background-color: #161b22;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .project p {
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+    .project a button {
+      padding: 10px 16px;
+      margin-top: 10px;
+      margin-right: 10px;
+      background: #58a6ff;
+      border: none;
+      color: #0d1117;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .project a button:hover {
+      background: #4092e6;
+      transform: scale(1.03);
+    }
+
     section { scroll-margin-top: 80px; }
   </style>
 </head>
@@ -219,29 +256,52 @@ I enjoy solving complex problems, optimizing workflows, and collaborating with c
   </div>
 </section>
 
-<section id="projects" data-aos="fade-up">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project"><img src="lankeshassociates.png"><p><b>Project Title:</b> Website for Lankesh Associates<br>
-<b>Technologies Used:</b> HTML, CSS, JavaScript<br>
-<b>Description:</b>
-I designed and developed a responsive, user-friendly website for Lankesh Associates, a professional service provider. The site was built using HTML, CSS, and JavaScript to ensure smooth performance, clean design, and interactivity. It showcases the firm's services, portfolio, and contact details in a clear and modern layout. The goal was to create a professional online presence that reflects the company's brand and enhances user engagement.</p><br>
-    <p><strong>Live Link:</strong> <a href="https://lankeshassociates.com/index.html">https://lankeshassociates.com/index.html</a></p></div>
-    <div class="project"><img src="LANKESH PARTNERS.png"><p><b>Position:</b> Data Administrator<br>
-<b>Company:</b> Lankesh Partners<br>
-<b>Tools Used:</b> Microsoft Excel, Google Sheets, Salesforce<br>
-<b>Description:</b>
-I worked as a Data Administrator at Lankesh Partners, where I was responsible for managing, organizing, and maintaining critical business data using Excel, Google Sheets, and Salesforce. My tasks included data entry, validation, and analysis to support sales operations and decision-making processes. I ensured data accuracy, created performance reports, and collaborated with different departments to streamline workflows and improve data-driven insights.<br>
+<div class="project">
+      <img src="lankeshassociates.png" alt="Lankesh Associates">
+      <p>
+        <strong>Project Title:</strong> Website for Lankesh Associates<br>
+        <strong>Technologies Used:</strong> HTML, CSS, JavaScript<br>
+        <strong>Description:</strong>
+        I designed and developed a responsive, user-friendly website for Lankesh Associates, a professional service provider. The site includes detailed service descriptions, contact forms, and an attractive layout for desktop and mobile devices.
+      </p>
+      <a href="https://lankeshassociates.com/index.html" target="_blank">
+        <button>🌐 View Live Site</button>
+      </a>
+    </div>
 
-<b> Workplace Address:</b> ["NO. 79 1/1, Panchikawatta Road, Colombo 10, Sri Lanka"]</p></div>
-    <div class="project"><img src="homebedsheet.png"><p><b>Project Title:</b> HomeBedsheet – Practice Website<br>
-<b>Technologies Used:</b> HTML, CSS, JavaScript<br>
-<b>Description:</b>
-I created a practice website for HomeBedsheet Lankesh using HTML and CSS to improve my front-end development skills. The site features a clean layout showcasing different bedsheet designs, product sections, and a visually appealing homepage. It was designed to simulate a basic e-commerce layout for showcasing textile products in a user-friendly and responsive format.<br>
-<br>
-<p><strong>Live Link:</strong> <a href="https://lankeshpartners20.github.io/homebedsheet/">https://lankeshpartners20.github.io/homebedsheet/</a></p></div>
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="LANKESH PARTNERS.png" alt="Lankesh Partners">
+      <p>
+        <strong>Position:</strong> Data Administrator<br>
+        <strong>Company:</strong> Lankesh Partners<br>
+        <strong>Tools Used:</strong> Microsoft Excel, Google Sheets, Salesforce<br>
+        <strong>Description:</strong>
+        I worked as a Data Administrator at Lankesh Partners. My responsibilities included cleaning and organizing large sets of data, creating reports, and maintaining accurate records for internal and client use.<br><br>
+        <strong>Workplace Address:</strong><br>
+        NO. 79 1/1, Panchikawatta Road, Colombo 10, Sri Lanka
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=NO.+79+1/1,+Panchikawatta+Road,+Colombo+10,+Sri+Lanka" target="_blank">
+        <button>📍 View on Google Maps</button>
+      </a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <img src="homebedsheet.png" alt="HomeBedsheet">
+      <p>
+        <strong>Project Title:</strong> HomeBedsheet – Practice Website<br>
+        <strong>Technologies Used:</strong> HTML, CSS, JavaScript<br>
+        <strong>Description:</strong>
+        I created a practice website for HomeBedsheet Lankesh using HTML and CSS. The site showcases product listings, customer testimonials, and includes a simple cart UI for learning e-commerce design basics.
+      </p>
+      <a href="https://lankeshpartners20.github.io/homebedsheet/" target="_blank">
+        <button>🌐 View Live Site</button>
+      </a>
+    </div>
+
   </div>
-</section>
+
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
